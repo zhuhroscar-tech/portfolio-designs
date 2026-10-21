@@ -19,7 +19,7 @@
 <p>Income is the cash the funds themselves paid out, multiplied by the shares held the day before each payment. No shares are sold to create it. The dashed "price only" line shows what the holdings are worth when that cash is taken out instead of reinvested.</p>
 <h2>Backtest versus live</h2>
 <p>Everything before 21 Oct 2026 is a hypothetical backtest computed after the fact, and the designs were chosen with knowledge of that history. From 21 Oct 2026 the weights are frozen and each design is tracked forward. Each day's published values are also appended to a log that is never rewritten.</p>
-<p>TECH-INCOME-30 was chosen using data up to September 2025 and then tested on the following year, which it had not seen. SEMI-ROTATE-10 is a model-driven semiconductor rotation; its history is simulated and its live paper-trading account is private, so it has no live record here.</p>
+<p>TECH-INCOME-30 was chosen using data up to September 2025 and then tested on the following year, which it had not seen. TECH-INCOME-30-LV was chosen the same way, by a rule fixed in advance: the lowest-volatility variant that kept at least 80% of TECH-INCOME-30's growth and a 15% income yield in the selection period. SEMI-ROTATE-10 is a model-driven semiconductor rotation; its history is simulated and its live paper-trading account is private, so it has no live record here.</p>
 <h2>Updates</h2>
 <p>After each US market close the data is refreshed, every design is recomputed with the same frozen rules, and the site is republished.</p>
 </div>
