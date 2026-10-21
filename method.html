@@ -1,30 +1,31 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Method — Portfolio Designs</title><meta name="description" content="How the portfolio designs are computed and tracked."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=B612+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/board.css"></head>
+<title>Method — Portfolio Designs</title><meta name="description" content="How the portfolio designs are computed and tracked."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"></head>
 <body>
 <header class="top"><div class="wrap">
-<a class="brand" href="index.html">Portfolio <b>Designs</b></a>
-<nav class="nav" aria-label="Main"><a href="index.html">Board</a><a href="method.html" aria-current="page">Method</a></nav>
-<div class="clock">AS OF 20 OCT 2026 CLOSE</div>
+<a class="brand" href="index.html">Portfolio Designs</a>
+<nav class="nav" aria-label="Main"><a href="index.html">Designs</a><a href="method.html" aria-current="page">Method</a></nav>
+<span class="tag asof">As of 20 Oct 2026 close</span>
 </div></header>
 <main class="wrap">
-<div class="method"><h1>Method</h1><p class="lead">Every number on this board comes from code, and the rules are fixed before the live record starts.</p>
+<div class="method"><h1>Method</h1>
+<p>Every number on this site comes from code, and the rules were fixed before the live record started.</p>
 <h2>Data and engine</h2>
-<p>Daily prices and fund distributions come from Yahoo Finance. They are loaded into a Microsoft Qlib data store, and every portfolio is run through Qlib's own backtest engine, with returns and risk measured by Qlib's risk analysis.</p>
+<p>Daily prices and fund distributions come from Yahoo Finance. They are loaded into a Microsoft Qlib data store, every portfolio is run through Qlib's own backtest engine, and returns and risk are measured with Qlib's risk analysis.</p>
 <h2>Timing and costs</h2>
 <p>A design decides at a month-end close and trades at the next day's open, paying 5 basis points per trade (10 for TECH-INCOME-30). Holdings drift between rebalances.</p>
 <h2>Income</h2>
-<p>Income is the cash the funds themselves paid out, multiplied by the shares held the day before each payment. No shares are sold to create it. "Price only" lines show what the holdings are worth when that cash is taken out instead of reinvested.</p>
+<p>Income is the cash the funds themselves paid out, multiplied by the shares held the day before each payment. No shares are sold to create it. The dashed "price only" line shows what the holdings are worth when that cash is taken out instead of reinvested.</p>
 <h2>Backtest versus live</h2>
-<p>Everything before 21 Oct 2026 is a hypothetical backtest computed after the fact; the designs were chosen with knowledge of that history. From 21 Oct 2026 the weights are frozen and each design is tracked forward. Each day's published values are also appended to a log that is never rewritten.</p>
+<p>Everything before 21 Oct 2026 is a hypothetical backtest computed after the fact, and the designs were chosen with knowledge of that history. From 21 Oct 2026 the weights are frozen and each design is tracked forward. Each day's published values are also appended to a log that is never rewritten.</p>
 <p>TECH-INCOME-30 was chosen using data up to September 2025 and then tested on the following year, which it had not seen. SEMI-ROTATE-10 is a model-driven semiconductor rotation; its history is simulated and its live paper-trading account is private, so it has no live record here.</p>
 <h2>Updates</h2>
-<p>After each US market close the data is refreshed, every design is recomputed with the same frozen rules, and the board is republished.</p>
+<p>After each US market close the data is refreshed, every design is recomputed with the same frozen rules, and the site is republished.</p>
 </div>
-<footer class="disc"><strong>Research, not investment advice.</strong> Results before the live date of each design are hypothetical backtests:
+<footer class="disc"><strong>Research, not investment advice.</strong> Results before each design's live date are hypothetical backtests:
 they were computed after the fact, include no taxes, and assume fills at the next day's open with the stated trading cost. Past
 performance, real or simulated, does not predict future results. Fund names belong to their issuers; this site is not affiliated with them.</footer>
 </main>
-<script src="assets/board.js"></script>
+<script src="assets/charts.js"></script>
 </body></html>
